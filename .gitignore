@@ -30,8 +30,11 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# env files (never commit real secrets/config — .env.example is the
+# documented template and is intentionally NOT ignored)
+.env
+.env.local
+.env.*.local
 
 # vercel
 .vercel
@@ -39,3 +42,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# claude code / agent artifacts — never committed
+.claude/
+
+
+# screenshot runs from scripts/screenshots.mjs
+.screenshots/
