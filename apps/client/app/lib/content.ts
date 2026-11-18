@@ -49,3 +49,10 @@ export const headerData = {
     { label: "About", to: "/about" },
   ],
 };
+
+export const tableData = [
+  { id: 1, title: "ARCHITECTURE", description: "CONNECTED" },
+  { id: 2, title: "DELIVERY", description: "GROUNDED" },
+  { id: 3, title: "RESILIENCE", description: "BUILT IN" },
+  { id: 4, title: "NETWORK", description: "ACTIVE" },
+];

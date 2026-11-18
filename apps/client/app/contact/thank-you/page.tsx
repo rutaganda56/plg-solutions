@@ -17,7 +17,7 @@ export default function ContactThankYouPage() {
           your enquiry and follow up using the contact details you provided.
         </p>
         <Link className="btn primary" href="/">
-          Return to home <span aria-hidden="true">→</span>
+          Return to home <span aria-hidden="true"></span>
         </Link>
       </div>
     </section>

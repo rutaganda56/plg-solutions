@@ -19,94 +19,6 @@ export const metadata: Metadata = {
   description:
     "PLG Solutions designs, integrates and delivers technology systems for organisations operating in complex, real-world environments.",
 };
-
-type CapabilityVisualKind = (typeof capabilities)[number]["visual"];
-
-function CapabilityVisual({ kind }: { kind: CapabilityVisualKind }) {
-  if (kind === "identity") {
-    return (
-      <div className="capability-art identity-art" aria-hidden="true">
-        <div className="identity-orbit">
-          <span />
-          <span />
-          <span />
-        </div>
-        <div className="identity-record">
-          <div className="record-avatar" />
-          <span>IDENTITY RECORD</span>
-          <strong>Verified</strong>
-          <small>CONSENT / REUSE / CONTROL</small>
-        </div>
-        <span className="art-caption">IDENTITY / CONSENT / VERIFICATION</span>
-      </div>
-    );
-  }
-
-  if (kind === "integration") {
-    return (
-      <div className="capability-art integration-art" aria-hidden="true">
-        <div className="integration-node node-top">PLATFORM</div>
-        <div className="integration-node node-left">DATA</div>
-        <div className="integration-node node-right">DEVICE</div>
-        <div className="integration-node node-bottom">IDENTITY</div>
-        <div className="integration-center">CONNECTED<br />SYSTEM</div>
-        <span className="art-caption">SYSTEMS / DATA / OPERATIONS</span>
-      </div>
-    );
-  }
-
-  if (kind === "data") {
-    return (
-      <div className="capability-art data-art" aria-hidden="true">
-        <div className="data-window">
-          <div className="data-window-head"><span /> OPERATIONS MONITOR</div>
-          <div className="data-window-body">
-            <div className="data-bars"><i /><i /><i /><i /><i /><i /></div>
-            <div className="data-stat"><strong>LIVE</strong><span>MONITORED</span></div>
-          </div>
-        </div>
-        <span className="art-caption">DATA / REPORTING / DECISION SUPPORT</span>
-      </div>
-    );
-  }
-
-  if (kind === "infrastructure") {
-    return (
-      <div className="capability-art infrastructure-art" aria-hidden="true">
-        <div className="infra-stack">
-          <span>PRIMARY ENVIRONMENT</span>
-          <span>HYBRID PLATFORM</span>
-          <span>RECOVERY PATH</span>
-        </div>
-        <div className="infra-grid"><i /><i /><i /><i /><i /><i /><i /><i /><i /></div>
-        <span className="art-caption">INFRASTRUCTURE / CLOUD / CONTINUITY</span>
-      </div>
-    );
-  }
-
-  if (kind === "security") {
-    return (
-      <div className="capability-art security-art" aria-hidden="true">
-        <div className="security-shield"><span>✓</span></div>
-        <div className="security-status"><i /> PROTECTED</div>
-        <span className="art-caption">SECURITY / RESILIENCE / RECOVERY</span>
-      </div>
-    );
-  }
-
-  return (
-    <div className="capability-art delivery-art" aria-hidden="true">
-      {["STRUCTURE", "DEFINE", "BUILD", "DEPLOY", "OPERATE"].map((stage, index) => (
-        <div className="delivery-stage" key={stage}>
-          <span>0{index + 1}</span>
-          <strong>{stage}</strong>
-        </div>
-      ))}
-      <span className="art-caption">STRUCTURE / DEFINE / BUILD / DEPLOY / OPERATE</span>
-    </div>
-  );
-}
-
 export default function Home() {
   return (
     <>
@@ -118,13 +30,37 @@ export default function Home() {
                 {hero.titlePrimary} <span className="accent">{hero.titleSecondary}</span>
               </h1>
               <p className="lede">{hero.lede}</p>
-              <div className="btns">
-                <Link className="btn primary" href="/capabilities">
-                  {hero.primaryCta} <span aria-hidden="true">→</span>
-                </Link>
-                <Link className="btn secondary" href="/contact">
-                  {hero.secondaryCta}
-                </Link>
+              <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+                <div className="btns">
+                  <Link className="btn primary" href="/capabilities">
+                    {hero.primaryCta} <span aria-hidden="true"></span>
+                  </Link>
+                  <Link className="btn secondary" href="/contact">
+                    {hero.secondaryCta}
+                  </Link>
+                </div>
+
+                <div className="w-full md:w-[420px]">
+                  <div className="grid grid-cols-2 overflow-hidden rounded-3xl border border-white/15 bg-slate-900/50 backdrop-blur-md">
+                    {hero.telemetry.map((s, i) => (
+                      <div
+                        key={s.label}
+                        className={[
+                          "px-6 py-7",
+                          i % 2 === 0 ? "border-r border-white/15" : "",
+                          i < 2 ? "border-b border-white/15" : "",
+                        ].join(" ")}
+                      >
+                        <p className="text-xs uppercase tracking-[0.15em] text-white/80">
+                          {s.label}
+                        </p>
+                        <p className="mt-2 text-lg font-bold uppercase text-white">
+                          {s.value}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
             <div className="hero-visual">
@@ -152,7 +88,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section className="section signals-section">
         <div className="container">
           <div className="signal-grid" role="region" aria-label="PLG Solutions delivery principles">
@@ -169,7 +104,7 @@ export default function Home() {
       </section>
 
       <section className="section soft">
-        <div className="container">
+        <div className="container ">
           <div className="section-head">
             <div>
               <span className="eyebrow">{whatWeDo.eyebrow}</span>
@@ -177,7 +112,7 @@ export default function Home() {
             </div>
             <p>{whatWeDo.lede}</p>
           </div>
-          <div className="capability-showcases">
+          <div className="capability-showcases grid grid-cols-1 gap-2 md:grid-cols-2">
             {capabilities.map((capability) => (
               <article
                 className="capability-showcase"
@@ -191,10 +126,9 @@ export default function Home() {
                   <h2>{capability.title}</h2>
                   <p>{capability.body}</p>
                   <Link className="text-link" href={`/capabilities#${capability.anchor}`}>
-                    {whatWeDo.link} <span aria-hidden="true">→</span>
+                    {whatWeDo.link} <span aria-hidden="true"></span>
                   </Link>
                 </div>
-                <CapabilityVisual kind={capability.visual} />
                 <span className="showcase-count">
                   {capability.index} / {String(capabilities.length).padStart(2, "0")}
                 </span>
@@ -249,7 +183,7 @@ export default function Home() {
               >
                 <span aria-hidden="true">{sector.index}</span>
                 <strong>{sector.title}</strong>
-                <span className="sector-arrow" aria-hidden="true">→</span>
+                <span className="sector-arrow" aria-hidden="true"></span>
               </Link>
             ))}
           </div>

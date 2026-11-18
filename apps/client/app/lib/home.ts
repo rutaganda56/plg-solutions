@@ -29,16 +29,16 @@ const videos = {
 };
 
 const signals = [
-  { index: "01", title: "Strategy → System", body: "Translate ambition into architecture." },
-  { index: "02", title: "System → Operation", body: "Integrate technology into reality." },
-  { index: "03", title: "Operation → Outcome", body: "Deliver measurable performance." },
+  { index: "01", title: "Strategy  System", body: "Translate ambition into architecture." },
+  { index: "02", title: "System  Operation", body: "Integrate technology into reality." },
+  { index: "03", title: "Operation  Outcome", body: "Deliver measurable performance." },
 ];
 
 const whatWeDo = {
   eyebrow: "What we do",
   title: "Technology that works where it matters.",
   lede:
-    "We connect technical ambition with practical implementation — from system design and integration to deployment, resilience and long-term operation.",
+    "We connect technical ambition with practical implementation from system design and integration to deployment, resilience and long-term operation.",
   link: "Explore capability",
 };
 

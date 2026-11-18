@@ -19,7 +19,7 @@ export default function CTASection({
             <p>{description}</p>
           </div>
           <Link className="btn" href="/contact">
-            Start a conversation <span aria-hidden="true">→</span>
+            Start a conversation <span aria-hidden="true"></span>
           </Link>
         </div>
       </div>
