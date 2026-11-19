@@ -6,14 +6,10 @@ import { feature } from "topojson-client";
 import type { Topology, GeometryCollection } from "topojson-specification";
 import type { FeatureCollection, Geometry } from "geojson";
 import worldData from "world-atlas/countries-110m.json";
-// For sharper borders and lakes, use "world-atlas/countries-50m.json" instead.
-
-/* ----------------------------- Map geometry ------------------------------ */
-// Computed once at module load, not on every render.
 
 const W = 1000;
-const LAT_TOP = 76; // crops the Arctic
-const LAT_BOTTOM = -56; // crops Antarctica
+const LAT_TOP = 76; 
+const LAT_BOTTOM = -56; 
 
 const projection = geoMercator()
   .scale(W / (2 * Math.PI))
@@ -31,8 +27,6 @@ const LAND = countries.features
   .filter((f) => String(f.id) !== "010") // drop Antarctica
   .map((f, i) => ({ key: String(f.id ?? i), d: pathGen(f) ?? "" }))
   .filter((p) => p.d);
-
-/* --------------------------------- Data ---------------------------------- */
 
 type Anchor = "tl" | "tr" | "bl" | "br";
 
@@ -58,7 +52,7 @@ const locations = [
     tipLabel: "Lagos",
     city: "Lagos",
     label: "Lagos",
-    address: "Nigeria", // TODO: add the full Lagos address
+    address: "Nigeria", 
     lon: 3.38,
     lat: 6.52,
     tip: { dx: -24, dy: -18, anchor: "br" as Anchor },
@@ -71,7 +65,7 @@ const locations = [
     tipLabel: "Dubai",
     city: "Dubai",
     label: "Dubai",
-    address: "United Arab Emirates", // TODO: add the full Dubai address
+    address: "United Arab Emirates", 
     lon: 55.27,
     lat: 25.2,
     tip: { dx: 24, dy: -22, anchor: "bl" as Anchor },
@@ -88,7 +82,7 @@ const ANCHOR: Record<Anchor, [string, string]> = {
   br: ["-100%", "-100%"],
 };
 
-/* --------------------------------- Flags --------------------------------- */
+
 
 function Flag({ code }: { code: FlagCode }) {
   return (
@@ -125,7 +119,7 @@ function Flag({ code }: { code: FlagCode }) {
   );
 }
 
-/* ------------------------------- Component ------------------------------- */
+
 
 const focusRing =
   "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-teal";
@@ -136,7 +130,7 @@ export default function OfficeAtlas() {
 
   return (
     <div className="bg-atlas-sea text-atlas-ink">
-      {/* ------------------------------- Map ------------------------------- */}
+
       <div
         className="relative overflow-hidden"
         style={{ aspectRatio: `${W} / ${H.toFixed(1)}` }}
@@ -171,7 +165,6 @@ export default function OfficeAtlas() {
             "--ty": ty,
           } as CSSProperties;
 
-          // On phones only the selected tooltip is shown
           const hideOnMobile = isSelected ? "" : "max-sm:hidden";
 
           return (
@@ -236,7 +229,7 @@ export default function OfficeAtlas() {
         })}
       </div>
 
-      {/* ------------------------------ List ------------------------------- */}
+
       <div
         role="group"
         aria-label="Select an office"
