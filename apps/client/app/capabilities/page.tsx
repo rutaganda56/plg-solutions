@@ -36,21 +36,7 @@ const platforms = [
     title: "Border & trade systems",
     body: "Integrated screening, inspection and clearance infrastructure across inland and border points.",
     focus: ["Cloud", "Hybrid", "Recovery"],
-  },
-  // {
-  //   id: "security",
-  //   index: "05 / SECURITY & RESILIENCE",
-  //   title: "Security & resilience",
-  //   body: "Shape security architecture around regulatory requirements, operational risks and service continuity.",
-  //   focus: ["Security design", "Risk", "Resilience"],
-  // },
-  // {
-  //   id: "delivery",
-  //   index: "06 / DELIVERY",
-  //   title: "Delivery & operations",
-  //   body: "Structure implementation and rollout so ownership and ongoing operation are considered from the beginning.",
-  //   focus: ["Structure", "Deployment", "Operations"],
-  // },
+  }
 ];
 
 const supportingLayers = [

@@ -13,7 +13,7 @@ const industries = [
     id: "government",
     index: "01",
     icon: "⌂",
-    title: "Government & public services",
+    title: "Government & public sectors",
     description:
       "Digital public services, shared platforms and infrastructure modernisation for ministries, agencies and national institutions.",
     focus: ["Digital public services", "Shared platforms", "Infrastructure modernisation"],
@@ -24,8 +24,8 @@ const industries = [
     icon: "◉",
     title: "Financial services & regulation",
     description:
-      "Identity verification, supervisory data and sector-wide platforms for central banks, regulators, banks and insurers.",
-    focus: ["Identity & verification", "Supervisory data", "Sector platforms"],
+      "Verification, supervision and data infrastructure for central banks, regulators, banks and insurers.",
+    focus: ["Identity & verification", "Supervisory data", "Sector wide platforms"],
   },
   {
     id: "telecommunications",
@@ -33,7 +33,7 @@ const industries = [
     icon: "⌁",
     title: "Telecommunications",
     description:
-      "Subscriber verification, systems integration and compliance workflows for operators and the regulators who supervise them.",
+      "Subscriber verification, integration and compliance systems for operators and the regulators who supervise them.",
     focus: ["Subscriber verification", "Regulatory reporting", "Systems integration"],
   },
   {
@@ -42,7 +42,7 @@ const industries = [
     icon: "⇄",
     title: "Trade & borders",
     description:
-      "Screening, inspection and clearance systems that support operations across inland and border points.",
+      "Screening, inspection and clearance infrastructure across inland and border points.",
     focus: ["Border systems", "Inspection technology", "Clearance workflows"],
   },
   {
@@ -51,7 +51,7 @@ const industries = [
     icon: "⚡",
     title: "Energy & utilities",
     description:
-      "Connected systems for asset management, operational monitoring and coordination between field and control-room teams.",
+      "Connected systems for managing assets, monitoring operations and coordinating field and control-room teams across multiple locations.",
     focus: ["Distributed monitoring", "Asset data", "Field-to-office workflows"],
   },
 ];

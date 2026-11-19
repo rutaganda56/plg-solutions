@@ -925,9 +925,7 @@ a {
 
 .platform-card {
   min-height: 285px;
-  background:
-    radial-gradient(circle at 100% 0, rgba(220, 235, 248, 0.65), transparent 48%),
-    #fff;
+  background:#fff;
 }
 
 .platform-card > span,
@@ -2824,16 +2822,6 @@ a {
 .platform-card h3 {
   margin-top: 18px;
 }
-
-/* .platform-focus {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin: auto 0 0;
-  padding: 18px 0 0;
-  list-style: none;
-} */
-
 .platform-focus li {
   padding: 5px 8px;
   border: 1px solid var(--line);
