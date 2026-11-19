@@ -12,50 +12,34 @@ export default function TermsPage() {
     <>
       <PageHero
         eyebrow="Legal"
-        title={<>Website terms</>}
-        description="These terms describe the basic conditions for using the PLG Solutions website."
+        title={<>Terms of use</>}
+        description="These terms apply to your use of the PLG Solutions website."
         compact
       />
       <div className="container">
         <article className="legal-content">
-          <p className="legal-updated">Last updated: 13 November 2026</p>
-          <h2>Website information</h2>
+          <p className="legal-updated">Last updated: 19 November 2026</p>
+          <h2>Using this site</h2>
           <p>
-            The information on this website is provided for general
-            informational purposes. While we aim to keep it clear and current,
-            it may not describe every service, capability or engagement
-            requirement. Please contact us to discuss a specific need.
+            The site is provided to describe PLG Solutions and to receive project,
+             partnership, procurement and related enquiries. Do not misuse the site or attempt to disrupt it.
           </p>
 
-          <h2>No offer or professional advice</h2>
+          <h2>Content</h2>
           <p>
-            Website content does not create a service agreement, guarantee a
-            particular result or constitute professional advice for a specific
-            situation. Any services will be governed by the terms agreed
-            directly between the relevant parties.
+            Website content is for general information. 
+            It is not a bid, contract, or advice. Project terms, if any, are agreed separately in writing.
           </p>
 
-          <h2>Acceptable use</h2>
+          <h2>Enquiries</h2>
           <p>
-            You may use this website for lawful purposes. Do not attempt to
-            disrupt its operation, gain unauthorised access to systems or submit
-            content that is unlawful, misleading or harmful.
+            Sending an enquiry does not create a contract.
+            We will tell you honestly whether we are the right partner for the work you describe.
           </p>
 
-          <h2>Intellectual property and third-party links</h2>
+          <h2>Contact</h2>
           <p>
-            Unless otherwise stated, website content and branding are owned by
-            or used with permission by PLG Solutions. You may not reproduce or
-            distribute material from this website for commercial use without
-            prior permission. Links to third-party sites are provided for
-            convenience; PLG Solutions does not control their content or terms.
-          </p>
-
-          <h2>Changes and contact</h2>
-          <p>
-            We may update website content or these terms from time to time.
-            Questions about these terms can be sent to{" "}
-            <a href={`mailto:${contact.email}`}>{contact.email}</a>.
+            Questions about these terms: info@plgsolutions.com.
           </p>
         </article>
       </div>
