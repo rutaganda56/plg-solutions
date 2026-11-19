@@ -14,59 +14,47 @@ export default function PrivacyPage() {
       <PageHero
         eyebrow="Legal"
         title={<>Privacy notice</>}
-        description="This notice explains what information you may provide through this website and how it is used to respond to you."
+        description="This notice explains how PLG Solutions uses the details you send through the website contact form."
         compact
       />
       <div className="container">
         <article className="legal-content">
-          <p className="legal-updated">Last updated: 13 November 2026</p>
+          <p className="legal-updated">Last updated: 19 November 2026</p>
           <p>
-            PLG Solutions respects the privacy of people who contact us. This
-            notice applies to information submitted through the contact form or
-            through the email and phone details published on this website.
+            This notice explains how PLG Solutions uses the details you send through the website contact form.
           </p>
 
-          <h2>Information you provide</h2>
+          <h2>Who we are</h2>
           <p>
-            The contact form may ask for your name, organisation, email address,
-            phone number, country, enquiry type and message. Please do not
-            include passwords, payment information or other sensitive personal
-            information in your message.
+            PLG Solutions is headquartered in Kigali, Rwanda. For privacy questions, email info@plgsolutions.com.
           </p>
 
-          <h2>How we use it</h2>
+          <h2>What we collect</h2>
           <p>
-            We use the information you submit to review and respond to your
-            enquiry, communicate with you about it, and take reasonable steps
-            to prevent misuse of the form. We do not ask for information that is
-            unnecessary to understand your enquiry.
+            When you send an enquiry we collect the name, organisation, email, country, enquiry type and message you provide. 
+            Phone is optional. We also record that you consented to us using those details to respond.
           </p>
 
-          <h2>Sharing and service providers</h2>
+          <h2>How We Use It</h2>
           <p>
-            Information may be processed by service providers that support the
-            operation of this website or the handling of enquiries. We do not
-            sell the personal information submitted through the contact form.
-            Information may also be disclosed where required by applicable law.
+            We use enquiry details only to route your message to the right person and to reply. 
+            We do not sell this information, and we do not use it for marketing unless you ask us to stay in touch.
           </p>
 
-          <h2>Retention and your choices</h2>
+          <h2>How long we keep it</h2>
           <p>
-            We retain enquiry information for as long as reasonably necessary
-            to respond and maintain related business records, subject to
-            applicable legal requirements. You may contact us to request access
-            to, correction or deletion of information you have provided, subject
-            to any legal obligations that apply.
+            We keep enquiry records for as long as needed to handle the conversation and 
+            any follow-up work that comes from it, then delete them when they are no longer required.
           </p>
 
-          <h2>Contact</h2>
+          <h2>Your choices</h2>
           <p>
             For privacy questions or requests, email{" "}
             <a href={`mailto:${contact.email}`}>{contact.email}</a>.
           </p>
           <p>
-            This website may link to third-party services. Their privacy
-            practices are governed by their own notices.
+            You can ask us what enquiry details we hold, ask us to correct them,
+            or ask us to delete them, by emailing info@plgsolutions.com.
           </p>
         </article>
       </div>
