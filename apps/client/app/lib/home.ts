@@ -98,7 +98,7 @@ const connected = {
   live: "SYSTEMS / DATA / OPERATIONS",
   title: "One operating picture across complex environments.",
   lede:
-    "PLG Solutions brings platforms, infrastructure, data and people into a coherent system — helping organisations move from fragmented technology to clearer operational control.",
+    "PLG Solutions brings platforms, infrastructure, data and people into a coherent system helping organisations move from fragmented technology to clearer operational control.",
   cards: [
     {
       index: "01",

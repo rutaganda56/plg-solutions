@@ -2825,14 +2825,14 @@ a {
   margin-top: 18px;
 }
 
-.platform-focus {
+/* .platform-focus {
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
   margin: auto 0 0;
   padding: 18px 0 0;
   list-style: none;
-}
+} */
 
 .platform-focus li {
   padding: 5px 8px;
