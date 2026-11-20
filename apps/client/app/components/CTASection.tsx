@@ -18,7 +18,7 @@ export default function CTASection({
             <h2 className="mt-4 max-w-[760px] text-[clamp(1.9rem,3.2vw,2.75rem)] font-semibold leading-[1.06] tracking-[-0.045em] text-[#071f3b]">{title}</h2>
             <p className="mt-5 max-w-[680px] text-base leading-7 text-[#071f3b]">{description}</p>
           </div>
-          <Link className="inline-flex min-h-14 items-center justify-center rounded-full bg-[#071f3b] px-6 text-sm font-semibold text-white" href="/contact">
+          <Link className="inline-flex min-h-14 items-center justify-center rounded-full bg-[#071f3b] px-6 text-sm font-semibold !text-white" href="/contact">
             Start a conversation <span aria-hidden="true"></span>
           </Link>
         </div>
