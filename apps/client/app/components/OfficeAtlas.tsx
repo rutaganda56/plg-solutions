@@ -87,7 +87,7 @@ const ANCHOR: Record<Anchor, [string, string]> = {
 function Flag({ code }: { code: FlagCode }) {
   return (
     <svg
-      className="shrink-0 rounded-sm ring-1 ring-atlas-ink/10"
+      className="shrink-0 rounded-sm ring-1 ring-[#10293a]/10"
       width="24"
       height="16"
       viewBox="0 0 24 16"
@@ -95,9 +95,11 @@ function Flag({ code }: { code: FlagCode }) {
     >
       {code === "rw" && (
         <>
-          <rect width="24" height="8" fill="#00A1DE" />
-          <rect y="8" width="24" height="4" fill="#FAD201" />
-          <rect y="12" width="24" height="4" fill="#20603D" />
+          <rect width="24" height="5.34" fill="#00A1DE" />
+          <rect y="5.33" width="24" height="5.34" fill="#FAD201" />
+          <rect y="10.66" width="24" height="5.34" fill="#20603D" />
+          <circle cx="19.2" cy="3.7" r="1.35" fill="#FAD201" />
+          <circle cx="19.2" cy="3.7" r="0.7" fill="#00A1DE" />
         </>
       )}
       {code === "ng" && (
@@ -112,7 +114,7 @@ function Flag({ code }: { code: FlagCode }) {
           <rect x="6" width="18" height="5.34" fill="#00732F" />
           <rect x="6" y="5.33" width="18" height="5.34" fill="#fff" />
           <rect x="6" y="10.66" width="18" height="5.34" fill="#000" />
-          <rect width="6" height="16" fill="#E4002B" />
+          <rect width="6" height="16" fill="#FF0000" />
         </>
       )}
     </svg>
@@ -122,14 +124,14 @@ function Flag({ code }: { code: FlagCode }) {
 
 
 const focusRing =
-  "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-teal";
+  "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0c566d]";
 
 export default function OfficeAtlas() {
   const [selectedId, setSelectedId] = useState<OfficeId>("rwanda");
   const selected = locations.find((l) => l.id === selectedId);
 
   return (
-    <div className="bg-atlas-sea text-atlas-ink">
+    <div className="overflow-hidden rounded-[20px] border border-white/15 bg-white text-[#071f3b]">
 
       <div
         className="relative overflow-hidden"
@@ -145,7 +147,7 @@ export default function OfficeAtlas() {
             <path
               key={p.key}
               d={p.d}
-              className="fill-atlas-land stroke-white/45 stroke-[0.6] [stroke-linejoin:round] [vector-effect:non-scaling-stroke]"
+              className="fill-[#071f3b]/25 stroke-white stroke-[0.6] [stroke-linejoin:round] [vector-effect:non-scaling-stroke]"
             />
           ))}
         </svg>
@@ -187,20 +189,20 @@ export default function OfficeAtlas() {
                 height="1"
                 aria-hidden="true"
               >
-                <line x1="0" y1="0" x2={dx} y2={dy} className="stroke-atlas-ink/55" strokeWidth="1" />
+                <line x1="0" y1="0" x2={dx} y2={dy} className="stroke-[#10293a]/55" strokeWidth="1" />
               </svg>
 
               {/* dot + pulse ring */}
               <span
                 aria-hidden="true"
                 className={`absolute inset-[5px] rounded-full border-2 border-white transition-colors ${
-                  isSelected ? "bg-atlas-green" : "bg-atlas-teal"
+                  isSelected ? "bg-[#071f3b]" : "bg-white"
                 }`}
               >
                 <span
-                  className={`pointer-events-none absolute -inset-1.5 rounded-full border-[1.5px] border-atlas-green ${
+                  className={`pointer-events-none absolute -inset-1.5 rounded-full border-[1.5px] border-[#2e9e78] ${
                     isSelected
-                      ? "animate-atlas-pulse motion-reduce:scale-150 motion-reduce:animate-none motion-reduce:opacity-60"
+                      ? "animate-ping motion-reduce:animate-none motion-reduce:opacity-60"
                       : "opacity-0"
                   }`}
                 />
@@ -208,9 +210,9 @@ export default function OfficeAtlas() {
 
               {/* tooltip card */}
               <span
-                className={`absolute left-[calc(50%+var(--dx))] top-[calc(50%+var(--dy))] flex translate-x-(--tx) translate-y-(--ty) items-center gap-2.5 whitespace-nowrap rounded-md border border-atlas-ink/5 bg-white py-[9px] pr-4 pl-2.5 text-left transition-shadow max-sm:py-[7px] max-sm:pr-3 max-sm:pl-2 ${
+                className={`absolute left-[calc(50%+var(--dx))] top-[calc(50%+var(--dy))] flex translate-x-(--tx) translate-y-(--ty) items-center gap-2.5 whitespace-nowrap rounded-md border border-[#10293a]/5 bg-white py-[9px] pr-4 pl-2.5 text-left transition-shadow max-sm:py-[7px] max-sm:pr-3 max-sm:pl-2 ${
                   isSelected
-                    ? "shadow-[0_0_0_1.5px_var(--color-atlas-teal),0_4px_14px_rgba(16,41,58,0.16)]"
+                    ? "shadow-[0_0_0_1.5px_#0c566d,0_4px_14px_rgba(16,41,58,0.16)]"
                     : "shadow-[0_2px_10px_rgba(16,41,58,0.12)]"
                 } ${hideOnMobile}`}
               >
@@ -219,7 +221,7 @@ export default function OfficeAtlas() {
                   <strong className="block text-[13px] leading-tight font-bold max-sm:text-xs">
                     {location.tipName}
                   </strong>
-                  <small className="block text-[11px] leading-snug text-atlas-muted">
+                  <small className="block text-[11px] leading-snug text-[#667985]">
                     {location.tipLabel}
                   </small>
                 </span>
@@ -233,7 +235,7 @@ export default function OfficeAtlas() {
       <div
         role="group"
         aria-label="Select an office"
-        className="grid grid-cols-1 border-t border-atlas-line sm:grid-cols-3"
+        className="grid grid-cols-1 border-t border-[#dde7ee] sm:grid-cols-3"
       >
         {locations.map((location) => {
           const isSelected = selectedId === location.id;
@@ -245,14 +247,14 @@ export default function OfficeAtlas() {
               onClick={() => setSelectedId(location.id)}
               className={`flex cursor-pointer items-center gap-3.5 px-4 py-[18px] text-left transition-colors ${focusRing} ${
                 isSelected
-                  ? "border-b-2 border-atlas-ink bg-atlas-mint"
-                  : "border-b border-atlas-line hover:bg-atlas-mint/60"
+                  ? "border-b-2 border-[#10293a] bg-[#eef6f3]"
+                  : "border-b border-[#dde7ee] hover:bg-[#eef6f3]/60"
               }`}
             >
               <Flag code={location.flag} />
               <span>
                 <strong className="block text-sm font-bold">{location.country}</strong>
-                <span className="block text-xs text-atlas-muted">{location.label}</span>
+                <span className="block text-xs text-[#667985]">{location.label}</span>
               </span>
             </button>
           );
@@ -260,8 +262,8 @@ export default function OfficeAtlas() {
       </div>
 
       {selected && (
-        <p className="m-0 px-1 pt-3.5 pb-1 text-[13px] text-atlas-muted" aria-live="polite">
-          <strong className="text-atlas-ink">{selected.city}</strong>
+        <p className="m-0 px-1 pt-3.5 pb-1 text-[13px] text-[#667985]" aria-live="polite">
+          <strong className="text-[#10293a]">{selected.city}</strong>
           <span> · {selected.address}</span>
         </p>
       )}
