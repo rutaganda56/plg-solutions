@@ -22,12 +22,6 @@ const hero = {
   ],
 };
 
-const videos = {
-  hero: "https://videos.pexels.com/video-files/3125427/3125427-uhd_3840_2160_25fps.mp4",
-  infrastructure:
-    "https://videos.pexels.com/video-files/7140928/7140928-uhd_3840_2160_24fps.mp4",
-};
-
 const signals = [
   { index: "01", title: "Strategy  System", body: "Translate ambition into architecture." },
   { index: "02", title: "System  Operation", body: "Integrate technology into reality." },
@@ -101,17 +95,17 @@ const connected = {
     "PLG Solutions brings platforms, infrastructure, data and people into a coherent system helping organisations move from fragmented technology to clearer operational control.",
   cards: [
     {
-      index: "01",
+      index: "#1",
       title: "Connect the environment",
       body: "Bring platforms, infrastructure and interfaces into a dependable connected architecture.",
     },
     {
-      index: "02",
+      index: "#2",
       title: "Surface the right information",
       body: "Move useful data to the people and systems that need it, when they need it.",
     },
     {
-      index: "03",
+      index: "#3",
       title: "Strengthen decisions and delivery",
       body: "Create clearer operational visibility, accountability and confidence in execution.",
     },
@@ -122,27 +116,27 @@ const sectorsHeading = "Built for institutions operating at national scale.";
 
 const sectors = [
   {
-    index: "⌂",
+    index: "/corporate_fare_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png",
     title: "Government & public sector",
     anchor: "government",
   },
   {
-    index: "◉",
+    index: "/local_atm_24dp_5985E1_FILL0_wght400_GRAD0_opsz24.png",
     title: "Financial services & regulation",
     anchor: "financial",
   },
   {
-    index: "⌁",
+    index: "/cell_tower_24dp_5985E1_FILL0_wght400_GRAD0_opsz24.png",
     title: "Telecommunications",
     anchor: "telecommunications",
   },
   {
-    index: "⇄",
+    index: "/swap_horizontal_circle_24dp_5985E1_FILL0_wght400_GRAD0_opsz24.png",
     title: "Trade & borders",
     anchor: "trade",
   },
   {
-    index: "⚡",
+    index: "/whatshot_24dp_5985E1_FILL0_wght400_GRAD0_opsz24.png",
     title: "Energy & utilities",
     anchor: "energy",
   },
@@ -188,7 +182,6 @@ const cta = {
 
 export {
   hero,
-  videos,
   signals,
   whatWeDo,
   capabilities,
