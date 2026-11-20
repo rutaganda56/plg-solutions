@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import PageHero from "@/app/components/PageHero";
-import { contact } from "@/app/lib/content";
 
 export const metadata: Metadata = {
   title: "Terms",
