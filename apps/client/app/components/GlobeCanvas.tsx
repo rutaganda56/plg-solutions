@@ -45,9 +45,9 @@ export default function GlobeCanvas({ cx = 0.5, cy = 0.5, scale = 0.44, offices 
             x: Math.sin(v) * Math.cos(u),
             y: Math.sin(v) * Math.sin(u),
             z: Math.cos(v),
-            r: 120 + Math.random() * 60,
-            g: 180 + Math.random() * 60,
-            b: 220 + Math.random() * 35,
+            r: 183,
+            g: 201,
+            b: 220,
           });
         }
       }
@@ -86,7 +86,7 @@ export default function GlobeCanvas({ cx = 0.5, cy = 0.5, scale = 0.44, offices 
         for (const o of officePositions) {
           const px = cxp + (o.x - 0.5) * radius * 2;
           const py = cyp + (o.y - 0.5) * radius * 1.4;
-          ctx.fillStyle = "#0c566d";
+          ctx.fillStyle = "#ffffff";
           ctx.beginPath();
           ctx.arc(px, py, 4, 0, Math.PI * 2);
           ctx.fill();
