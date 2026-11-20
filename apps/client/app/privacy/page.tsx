@@ -17,9 +17,9 @@ export default function PrivacyPage() {
         description="This notice explains how PLG Solutions uses the details you send through the website contact form."
         compact
       />
-      <div className="container">
-        <article className="legal-content">
-          <p className="legal-updated">Last updated: 19 November 2026</p>
+      <div className="mx-auto w-[calc(100%-48px)] max-w-[1320px]">
+        <article className="max-w-[850px] py-[54px] pb-[90px] [&_a]:text-[#071f3b] [&_a]:underline [&_h2]:mt-[38px] [&_h2]:mb-[10px] [&_h2]:text-[1.35rem] [&_h2]:font-semibold [&_h2]:tracking-[-0.025em] [&_p]:text-[#5c6e82] [&_p]:leading-7">
+          <p className="text-[0.86rem] text-[#5c6e82]">Last updated: 19 November 2026</p>
           <p>
             This notice explains how PLG Solutions uses the details you send through the website contact form.
           </p>
