@@ -103,45 +103,55 @@ export default function CapabilitiesPage() {
         description="PLG Solutions designs, builds and operates digital infrastructure used by many organisations at once the identity, data and service layers that governments, regulators and industry depend on. We build in Rwanda, for the continent."
       />
 
-      <section className="section">
-        <div className="container">
-          <div className="page-intro">
-            <span className="eyebrow">Shared digital infrastructure</span>
-            <h2>National platforms</h2>
-            <p>
+      <section data-reveal className="bg-white py-20 text-[#071f3b] md:py-24">
+        <div className="mx-auto w-[calc(100%-48px)] max-w-[1320px]">
+          <div className="mb-12 max-w-[780px]">
+            <span className="text-xs font-semibold uppercase tracking-[0.14em] text-[#071f3b]/60">Shared digital infrastructure</span>
+            <h2 className="mt-4 text-[clamp(1.8rem,3vw,2.5rem)] font-semibold leading-[1.1] tracking-[-0.045em]">National platforms</h2>
+            <p className="mt-3 text-[#071f3b]/65">
               Infrastructure built once, used by everyone who needs it.
             </p>
           </div>
-          <div className="platform-grid">
-            {platforms.map((platform) => (
-              <article
-                className="platform-card"
+          <div className="grid items-stretch gap-5 md:grid-cols-12">
+            {platforms.map((platform, platformIndex) => (
+              <article data-reveal-item
+                className={[
+                  "flex min-h-[280px] flex-col rounded-[16px] p-7",
+                  platformIndex === 0
+                    ? "border border-[#071f3b] bg-[#071f3b] text-white md:col-span-6"
+                    : platformIndex === 3
+                      ? "border border-[#071f3b]/15 bg-white text-[#071f3b] md:col-span-6"
+                      : "border border-[#071f3b]/15 bg-white text-[#071f3b] md:col-span-6",
+                ].join(" ")}
                 id={platform.id}
                 key={platform.index}
               >
-                <span>{platform.index}</span>
-                <h3>{platform.title}</h3>
-                <p>{platform.body}</p>
+                <span className={platformIndex === 0 ? "text-xs font-semibold tracking-[0.12em] text-white" : "text-xs font-semibold tracking-[0.12em] text-[#071f3b]"}>{platform.index}</span>
+                <h3 className={platformIndex === 0 ? "mt-8 max-w-[520px] text-[clamp(1.35rem,2vw,1.8rem)] font-semibold leading-tight tracking-[-0.035em] text-white" : "mt-8 max-w-[520px] text-[clamp(1.35rem,2vw,1.8rem)] font-semibold leading-tight tracking-[-0.035em] text-[#071f3b]"}>{platform.title}</h3>
+                <p className={platformIndex === 0 ? "mt-6 max-w-[560px] leading-7 text-white" : "mt-6 max-w-[560px] leading-7 text-[#071f3b]"}>{platform.body}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section soft">
-        <div className="container">
-          <div className="page-intro">
-            <span className="eyebrow">Supporting layers</span>
-            <h2>What it takes to run at national scale</h2>
-            <p>Platforms this size succeed on the layers underneath them.</p>
+      <section data-reveal className="bg-[#071f3b] py-20 text-white md:py-24">
+        <div className="mx-auto w-[calc(100%-48px)] max-w-[1320px]">
+          <div className="mb-12 max-w-[780px]">
+            <span className="text-xs font-semibold uppercase tracking-[0.14em] text-white/60">Supporting layers</span>
+            <h2 className="mt-4 text-[clamp(1.8rem,3vw,2.5rem)] font-semibold leading-[1.1] tracking-[-0.045em]">What it takes to run at national scale</h2>
+            <p className="mt-3 text-white/65">Platforms this size succeed on the layers underneath them.</p>
           </div>
-          <div className="support-grid">
+          <div className="grid gap-5 md:grid-cols-2">
             {supportingLayers.map((layer) => (
-              <article className="support-card" key={layer.index}>
-                <span>{layer.index}</span>
-                <h3>{layer.title}</h3>
-                <p>{layer.body}</p>
-                <ul className="industry-tags">
+              <article data-reveal-item
+                className="rounded-[20px] border border-white/15 p-7"
+                key={layer.index}
+              >
+                <span className="text-xs font-semibold tracking-[0.12em] text-white">{layer.index}</span>
+                <h3 className="mt-4 text-xl font-semibold text-white">{layer.title}</h3>
+                <p className="mt-3 leading-7 text-white">{layer.body}</p>
+                <ul className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm text-white">
                   {layer.focus.map((item) => <li key={item}>{item}</li>)}
                 </ul>
               </article>
@@ -150,43 +160,46 @@ export default function CapabilitiesPage() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="container">
-          <div className="section-head">
+      <section data-reveal className="bg-white py-20 text-[#071f3b] md:py-24">
+        <div className="mx-auto w-[calc(100%-48px)] max-w-[1320px]">
+          <div className="grid gap-8 md:grid-cols-[1fr_0.85fr] md:items-end">
             <div>
-              <span className="eyebrow">Delivery lifecycle</span>
-              <h2>We don&apos;t hand over and leave.</h2>
+              <span className="text-xs font-semibold uppercase tracking-[0.14em] text-[#071f3b]/60">Delivery lifecycle</span>
+              <h2 className="mt-4 text-[clamp(1.8rem,3vw,2.5rem)] font-semibold leading-[1.1] tracking-[-0.045em]">We don&apos;t hand over and leave.</h2>
             </div>
-            <p>
+            <p className="leading-7 text-[#071f3b]/65">
               Most national platforms stall on mandate, pricing and ownership rather than on engineering. 
               We work on all of it, and we stay for the operating life of the system.
             </p>
           </div>
-          <div className="lifecycle">
+          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-5">
             {lifecycle.map((step) => (
-              <article className="lifecycle-step" key={step.index}>
-                <span>{step.index}</span>
-                <h3>{step.title}</h3>
-                <p>{step.body}</p>
+              <article data-reveal-item
+                className="min-h-[210px] rounded-[20px] border border-[#071f3b]/15 p-6"
+                key={step.index}
+              >
+                <span className="text-xs font-semibold tracking-[0.12em] text-[#071f3b]">{step.index}</span>
+                <h3 className="mt-4 text-lg font-semibold text-[#071f3b]">{step.title}</h3>
+                <p className="mt-3 leading-7 text-[#071f3b]">{step.body}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section soft">
-        <div className="container africa-panel">
+      <section data-reveal className="bg-[#071f3b] py-20 text-white md:py-24">
+        <div className="mx-auto grid w-[calc(100%-48px)] max-w-[1320px] gap-12 md:grid-cols-[1fr_0.9fr] md:items-center">
           <div>
-            <span className="eyebrow">Built from here</span>
-            <h2>Built in Kigali. Designed for the continent.</h2>
-            <p>
+            <span className="text-xs font-semibold uppercase tracking-[0.14em] text-white/60">Built from here</span>
+            <h2 className="mt-4 text-[clamp(1.7rem,2.8vw,2.35rem)] font-semibold leading-[1.08] tracking-[-0.045em]">Built in Kigali. Designed for the continent.</h2>
+            <p className="mt-5 leading-7 text-white/65">
               Institutions across Africa face the same problems in a different order 
               fragmented identity systems, records that can&apos;t be verified across borders, services
                that stop at the edge of one agency. We build platforms designed from the outset to be 
                redeployed in a second market and to interoperate across them.
             </p>
           </div>
-          <div className="africa-globe">
+          <div className="h-[270px] min-h-[220px]">
             <GlobeCanvas cx={0.5} cy={0.5} scale={0.43} offices />
           </div>
         </div>
